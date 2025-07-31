@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <title>WHAT'S FOR DINNER - login</title>
+</head>
+<body>
+    <header>
+    <a href="index.html" id="logo"><span>WHATS4DINNER</span></a>
+    <div id="hamburger" onclick="toggleMenu()"><span id="burger-icon">☰</span></div>
+    <nav id="topbar">
+      <a href="recipebook.html">RECIPES BOOK</a>
+      <a href="index.html">HOMEPAGE</a>
+      <a href="FromTheFridge.html">FROM THE FRIDGE</a>
+      <section id="left-side">
+        <a href="login.html"><img src="images/Log_out.png" alt="Log out" /></a>
+        <a href="profile.html"><img src="images/avatar.png" alt="Profile" /></a>
+      </section>
+    </nav>
+  </header>
+
+    <section id="squarelogin">
+        <section class="prof">
+            <img src="images/vector_avatar.png">
+        </section>
+        <section id="signin">
+            <form class="form-container" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="username" class="input-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-prefix">@</span>
+                            <input type="text" class="input-text" id="username" required>
+                        </div>
+                        <div class="feedback-invalid">Please choose a username.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="input-label">Password</label>
+                        <input type="password" class="input-text" id="password" required>
+                        <div class="feedback-invalid">Please provide a valid password.</div>
+                    </div>
+
+                    <section id="btn-submitt-login">
+                        <div class="form-group full-width">
+                            <a href="signin.html" class="btn-signin">YOU DON'T HAVE AN ACCOUNT YET?</a>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn-submit">Submit Form</button>
+                        </div>
+                    </section>
+                </div>
+            </form>
+        </section>
+    </section>
+
+    <footer>
+        <section id="footer-sec">
+            <section id="first-foot">
+                <h1>WHO WE ARE</h1>
+                <ul>
+                    <li><a href="profile.html">Your profile</a></li>
+                    <li><a href="FromTheFridge.html">Recipes just for you</a></li>
+                    <li><a href="recipebook.html">Recipes book</a></li>
+                </ul>
+            </section>
+
+            <section id="sec-foot">
+                <h1>FOLLOW US</h1>
+                <ul>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.twitter.com/">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                </ul>
+            </section>
+        </section>
+        <section id="icons">
+            <section><a href="https://www.twitter.com/"><img src="images/tw.png"></a></section>
+            <section><a href="https://www.facebook.com/"><img src="images/fb.png"></a></section>
+            <section><a href="https://www.instagram.com/"><img src="images/ig.png"></a></section>
+        </section>
+        <section id="name">
+            <p>© 2025 FLOWER SHOP</p>
+        </section>
+    </footer>
+
+    <!-- ✅ JS LOGIN FETCH CODE -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('.form-container');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!username || !password) {
+                alert('Please fill in both username and password.');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('Login successful! Welcome, ' + result.user.firstName);
+                    localStorage.setItem('user', JSON.stringify(result.user));
+                    window.location.href = 'profile.html';
+                } else {
+                    alert(result.message);
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                alert('An error occurred during login.');
+            }
+        });
+    });
+    </script>
+</body>
+</html>

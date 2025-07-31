@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHAT'S FOR DINNER - Sign Up</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header>
+    <a href="index.html" id="logo"><span>WHATS4DINNER</span></a>
+    <div id="hamburger" onclick="toggleMenu()"><span id="burger-icon">☰</span></div>
+    <nav id="topbar">
+      <a href="recipebook.html">RECIPES BOOK</a>
+      <a href="index.html">HOMEPAGE</a>
+      <a href="FromTheFridge.html">FROM THE FRIDGE</a>
+      <section id="left-side">
+        <a href="login.html"><img src="images/Log_out.png" alt="Log out" /></a>
+        <a href="profile.html"><img src="images/avatar.png" alt="Profile" /></a>
+      </section>
+    </nav>
+  </header>
+  <section id="squarelogin">
+    <section class="prof"><img src="images/vector_avatar.png" /></section>
+    <section id="login">
+      <form id="signupForm" class="form-container">
+        <div class="form-row">
+          <div class="form-group short-field">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" required />
+          </div>
+
+          <div class="form-group short-field">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" required />
+          </div>
+
+          <div class="form-group full-width">
+            <label for="username">Username</label>
+            <input type="text" id="username" required />
+          </div>
+
+          <div class="form-group half-width">
+            <label for="password">Password</label>
+            <input type="password" id="password" required />
+          </div>
+
+          <div class="form-group half-width">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" required />
+          </div>
+
+          <div class="form-group full-width">
+            <button type="submit" class="btn-submit">Sign Up</button>
+          </div>
+
+          <div id="signup-message" style="margin-top: 10px; color: red;"></div>
+        </div>
+      </form>
+    </section>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

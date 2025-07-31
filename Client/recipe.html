@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+            
+            <title>WHAT'S FOR DINNER - recipe</title>
+        </head>
+        <body>
+            <header>
+                <a href="index.html" id="logo">
+                    <span>WHATS4DINNER</span>
+                </a>
+
+                <!-- 👇 Hamburger icon (visible sur mobile) -->
+                <div id="hamburger" onclick="toggleMenu()">
+                    <span id="burger-icon">☰</span>
+                </div>
+
+                <nav id="topbar">
+                    <a href="recipebook.html">RECIPES BOOK</a>
+                    <a href="index.html">HOMEPAGE</a>
+                    <a href="FromTheFridge.html">FROM THE FRIDGE</a>
+                    <section id="left-side">
+                    <a href="login.html">
+                        <img src="images/Log_out.png">
+                    </a>
+                    <a href="profile.html">
+                        <img src="images/avatar.png">  
+                    </a> 
+                    </section>
+                </nav>
+            </header>
+    <body>
+        <section id="recipe-row">
+            <section id="first-col-recipe">
+                <h1>Crepes</h1>
+                <section id="recipe-img">
+                    <img src="images/crepes.png">
+                </section>
+
+                <section id="rating-stars-general" class="rating-stars-group">
+                    <img src="images/star-empty.png" class="star">
+                    <img src="images/star-empty.png" class="star">
+                    <img src="images/star-empty.png" class="star">
+                    <img src="images/star-empty.png" class="star">
+                    <img src="images/star-empty.png" class="star">
+                </section>
+                <div class="counter">
+                        <button onclick="increase()">+</button>
+                        <span id="count">1 person</span>
+                        <button onclick="decrease()">−</button>
+                </div>
+
+                
+            </section>
+
+            <section id="second-col-recipe">
+                <section id="quantity-gestion">
+                    
+                    <h2>Ingredients</h2>
+                    <ul id="ingredients-list">
+                        <li><span class="quantity" data-base="100">100g</span> <span class="ingredient-name">Flour</span> </li>
+                        <li><span class="quantity" data-base="200">200ml</span> <span class="ingredient-name">Milk</span></li>
+                        <li><span class="quantity" data-base="2">2</span> <span class="ingredient-name">Eggs</span> </li>
+                    </ul>
+
+                    <section id="Steps">
+                        <ul>
+                            <h2>Instructions</h2>
+                            <li>Mix eggs with sugar</li>
+                            <li>Add milk</li>
+                            <li>Mix with the flour and baking powder</li>
+                            <li>Bake on a pan with butter</li>
+                        </ul>
+                    </section>
+
+                </section>
+                <section id="user-rate">
+                    <h1>Tell us what you tought about this recipe!</h1>
+                    <section id="rating-stars-user" class="rating-stars-group">
+                        <img src="images/star-empty.png" class="star">
+                        <img src="images/star-empty.png" class="star">
+                        <img src="images/star-empty.png" class="star">
+                        <img src="images/star-empty.png" class="star">
+                        <img src="images/star-empty.png" class="star">
+                    </section>
+                </section>
+
+            </section>
+
+        </section>
+            
+            
+
+
+
+
+        
+           </section>
+            </div>
+            </section>
+        </section>                    
+        </section>
+        <footer>
+            <section id="footer-sec">
+                <section id="first-foot">
+                    <h1>WHO WE ARE</h1>
+                    <ul>
+                        <li><a href="profile.html">Your profile</a></li>
+                        <li><a href="FromTheFridge.html">Recipes just for you</a></li>
+                        <li><a href="recipebook.html">Recipes book</a></li>
+                    </ul>
+                </section>
+
+                <section id="sec-foot">
+                    <h1>FOLLOW US</h1>
+                    <ul>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://www.twitter.com/">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="icons">
+                <section>
+                    <a href="https://www.twitter.com/">
+                        <img src="images/tw.png">
+                    </a>
+                </section>
+
+
+                <section>
+                    <a href="https://www.facebook.com/">
+                        <img src="images/fb.png">
+                    </a>
+                </section>
+
+
+                <section>
+                    <a href="https://www.instagram.com/"><img src="images/ig.png"></a>
+                </section>
+            </section>
+            <section id="name">
+                <p>© 2025 FLOWER SHOP</p>
+            </section>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
