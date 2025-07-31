@@ -1,86 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>WHAT'S FOR DINNER - Recipe Book</title>
-</head>
-<body>
-  <header>
-    <a href="index.html" id="logo"><span>WHATS4DINNER</span></a>
-    <div id="hamburger" onclick="toggleMenu()"><span id="burger-icon">☰</span></div>
-    <nav id="topbar">
-      <a href="recipebook.html">RECIPES BOOK</a>
-      <a href="index.html">HOMEPAGE</a>
-      <a href="FromTheFridge.html">FROM THE FRIDGE</a>
-      <section id="left-side">
-        <a href="login.html"><img src="images/Log_out.png"></a>
-        <a href="profile.html"><img src="images/avatar.png"></a>
-      </section>
-    </nav>
-  </header>
-
-  <main>
-    <section id="text">
-      <!-- טופס חיפוש -->
-      <nav class="custom-navbar">
-        <form id="recipeBookForm" class="custom-search" role="search">
-          <input type="search" id="recipeInput" placeholder="Search for ingredient..." aria-label="Search" />
-          <button type="submit">Search</button>
-        </form>
-      </nav>
-<!--
-
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Filter Categories</button>
-        <div id="myDropdown" class="dropdown-content">
-          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-          <a href="#">Gluten free</a>
-          <a href="#">Dairy free</a>
-          <a href="#">Sugar free</a>
-          <a href="#">Vegan</a>
-          <a href="#">Dessert</a>
-          <a href="#">Dinner</a>
-        </div>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>WHAT'S FOR DINNER - Recipe Book</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo"><span>WHATS4DINNER</span></a>
+      <div id="hamburger" onclick="toggleMenu()">
+        <span id="burger-icon">☰</span>
       </div>
--->
-      <!-- תוצאות יופיעו כאן -->
-      <div id="results" class="container4"></div>
-    </section>
-  </main>
+      <nav id="topbar">
+        <a href="recipebook.html">RECIPES BOOK</a>
+        <a href="index.html">HOMEPAGE</a>
+        <a href="FromTheFridge.html">FROM THE FRIDGE</a>
+        <section id="left-side">
+          <a href="login.html"><img src="images/Log_out.png" /></a>
+          <a href="profile.html"><img src="images/avatar.png" /></a>
+        </section>
+      </nav>
+    </header>
 
-  <footer>
-    <section id="footer-sec">
-      <section id="first-foot">
-        <h1>WHO WE ARE</h1>
-        <ul>
-          <li><a href="profile.html">Your profile</a></li>
-          <li><a href="FromTheFridge.html">Recipes just for you</a></li>
-          <li><a href="recipebook.html">Recipes book</a></li>
-        </ul>
+    <main>
+      <section id="text">
+        <nav class="custom-navbar">
+          <form id="recipeBookForm" class="custom-search" role="search">
+            <input
+              type="search"
+              id="recipeInput"
+              placeholder="Search for ingredient..."
+              aria-label="Search"
+            />
+            <button type="submit">Search</button>
+          </form>
+        </nav>
+        <div id="results" class="container4"></div>
+      </section>
+    </main>
+
+    <footer>
+      <section id="footer-sec">
+        <section id="first-foot">
+          <h1>WHO WE ARE</h1>
+          <ul>
+            <li><a href="profile.html">Your profile</a></li>
+            <li><a href="FromTheFridge.html">Recipes just for you</a></li>
+            <li><a href="recipebook.html">Recipes book</a></li>
+          </ul>
+        </section>
+
+        <section id="sec-foot">
+          <h1>FOLLOW US</h1>
+          <ul>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.twitter.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+          </ul>
+        </section>
       </section>
 
-      <section id="sec-foot">
-        <h1>FOLLOW US</h1>
-        <ul>
-          <li><a href="https://www.facebook.com/">Facebook</a></li>
-          <li><a href="https://www.twitter.com/">Twitter</a></li>
-          <li><a href="https://www.instagram.com/">Instagram</a></li>
-        </ul>
+      <section id="icons">
+        <a href="https://www.twitter.com/"><img src="images/tw.png" /></a>
+        <a href="https://www.facebook.com/"><img src="images/fb.png" /></a>
+        <a href="https://www.instagram.com/"><img src="images/ig.png" /></a>
       </section>
-    </section>
 
-    <section id="icons">
-      <a href="https://www.twitter.com/"><img src="images/tw.png"></a>
-      <a href="https://www.facebook.com/"><img src="images/fb.png"></a>
-      <a href="https://www.instagram.com/"><img src="images/ig.png"></a>
-    </section>
+      <section id="name"><p>© 2025 FLOWER SHOP</p></section>
+    </footer>
 
-    <section id="name"><p>© 2025 FLOWER SHOP</p></section>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-

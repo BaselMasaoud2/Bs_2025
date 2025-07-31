@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const fridgeForm = document.getElementById("fridgeForm");
   const favoritesContainer = document.getElementById("favoritesContainer");
-
   // חיפוש מתכונים
   if (fridgeForm) {
     fridgeForm.addEventListener("submit", async function (e) {
@@ -468,11 +467,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Failed to load random recipes:", err);
   }
 });
-
-
-
-/*Admin page */
-
 
 
 

@@ -207,7 +207,7 @@ app.get("/api/recommendations/:userId", async (req, res) => {
     const status = err.response?.status || 500;
     const message = err.response?.data?.message || err.message;
 
-    console.error("🔴 Recommendation API error:", status, message);
+    console.error("Recommendation API error:", status, message);
 
     if (status === 401 || status === 402) {
       return res.status(status).json({

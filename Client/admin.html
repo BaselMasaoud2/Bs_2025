@@ -1,99 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>WHAT'S FOR DINNER - Admin</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fira+Sans+Condensed&display=swap" rel="stylesheet" />
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fira+Sans+Condensed&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <a href="index.html" id="logo">
-            <span>WHATS4DINNER</span>
-        </a>
-        <div id="hamburger" onclick="toggleMenu()">
-            <span id="burger-icon">☰</span>
-        </div>
-        <nav id="topbar">
-            <a href="recipebook.html">RECIPES BOOK</a>
-            <a href="index.html">HOMEPAGE</a>
-            <a href="FromTheFridge.html">FROM THE FRIDGE</a>
-            <section id="left-side">
-                <a href="login.html"><img src="images/Log_out.png"></a>
-                <a href="profile.html"><img src="images/avatar.png"></a> 
-            </section>
-        </nav>
+      <a href="index.html" id="logo">
+        <span>WHATS4DINNER</span>
+      </a>
+      <div id="hamburger" onclick="toggleMenu()">
+        <span id="burger-icon">☰</span>
+      </div>
+      <nav id="topbar">
+        <a href="recipebook.html">RECIPES BOOK</a>
+        <a href="index.html">HOMEPAGE</a>
+        <a href="FromTheFridge.html">FROM THE FRIDGE</a>
+        <section id="left-side">
+          <a href="login.html"><img src="images/Log_out.png" /></a>
+          <a href="profile.html"><img src="images/avatar.png" /></a>
+        </section>
+      </nav>
     </header>
 
     <main>
-        <section id="title-stats">
-            <h1>Admin Dashboard</h1>
-        </section>
-        <div id="dashboard">
-            <div class="chart-box">
-                <h2>Last visites</h2>
-                <canvas id="barChart" width="500" height="400"></canvas>
-            </div>
-            <div class="chart-box">
-                <h2>Most popular recipes</h2>
-                <canvas id="pieChart" width="400" height="400"></canvas>
-            </div>
+      <section id="title-stats">
+        <h1>Admin Dashboard</h1>
+      </section>
+      <div id="dashboard">
+        <div class="chart-box">
+          <h2>Last visites</h2>
+          <canvas id="barChart" width="500" height="400"></canvas>
         </div>
+        <div class="chart-box">
+          <h2>Most popular recipes</h2>
+          <canvas id="pieChart" width="400" height="400"></canvas>
+        </div>
+      </div>
     </main>
 
     <section id="subscription-management">
-        <h2>Subscription Management (Ad-Free)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Full Name</th>
-                    <th>Username</th>
-                    <th>Subscription Date</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="userTableBody">
-                <!-- תוכן דינמי ייכנס כאן -->
-            </tbody>
-        </table>
+      <h2>Subscription Management (Ad-Free)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Username</th>
+            <th>Subscription Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody"></tbody>
+      </table>
     </section>
 
     <footer>
-        <section id="footer-sec">
-            <section id="first-foot">
-                <h1>WHO WE ARE</h1>
-                <ul>
-                    <li><a href="profile.html">Your profile</a></li>
-                    <li><a href="FromTheFridge.html">Recipes just for you</a></li>
-                    <li><a href="recipebook.html">Recipes book</a></li>
-                </ul>
-            </section>
-            <section id="sec-foot">
-                <h1>FOLLOW US</h1>
-                <ul>
-                    <li><a href="https://www.facebook.com/">Facebook</a></li>
-                    <li><a href="https://www.twitter.com/">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/">Instagram</a></li>
-                </ul>
-            </section>
+      <section id="footer-sec">
+        <section id="first-foot">
+          <h1>WHO WE ARE</h1>
+          <ul>
+            <li><a href="profile.html">Your profile</a></li>
+            <li><a href="FromTheFridge.html">Recipes just for you</a></li>
+            <li><a href="recipebook.html">Recipes book</a></li>
+          </ul>
         </section>
-        <section id="icons">
-            <section><a href="https://www.twitter.com/"><img src="images/tw.png" alt="Twitter"></a></section>
-            <section><a href="https://www.facebook.com/"><img src="images/fb.png" alt="Facebook"></a></section>
-            <section><a href="https://www.instagram.com/"><img src="images/ig.png" alt="Instagram"></a></section>
+        <section id="sec-foot">
+          <h1>FOLLOW US</h1>
+          <ul>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.twitter.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+          </ul>
         </section>
-        <section id="name">
-            <p>© 2025 FLOWER SHOP</p>
+      </section>
+      <section id="icons">
+        <section>
+          <a href="https://www.twitter.com/"
+            ><img src="images/tw.png" alt="Twitter"
+          /></a>
         </section>
+        <section>
+          <a href="https://www.facebook.com/"
+            ><img src="images/fb.png" alt="Facebook"
+          /></a>
+        </section>
+        <section>
+          <a href="https://www.instagram.com/"
+            ><img src="images/ig.png" alt="Instagram"
+          /></a>
+        </section>
+      </section>
+      <section id="name">
+        <p>© 2025 FLOWER SHOP</p>
+      </section>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
-

@@ -1,113 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WHAT'S FOR DINNER - profile</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Fira+Sans+Condensed&family=Inknut+Antiqua&family=Inria+Serif&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <header>
-    <a href="index.html" id="logo"><span>WHATS4DINNER</span></a>
-    <div id="hamburger" onclick="toggleMenu()"><span id="burger-icon">☰</span></div>
-    <nav id="topbar">
-      <a href="recipebook.html">RECIPES BOOK</a>
-      <a href="index.html">HOMEPAGE</a>
-      <a href="FromTheFridge.html">FROM THE FRIDGE</a>
-      <section id="left-side">
-        <a href="#" id="logoutBtn"><img src="images/Log_out.png" alt="Log out" /></a>
-        <a href="profile.html"><img src="images/avatar.png" alt="Profile" /></a>
-      </section>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WHAT'S FOR DINNER - profile</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Fira+Sans+Condensed&family=Inknut+Antiqua&family=Inria+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo"><span>WHATS4DINNER</span></a>
+      <div id="hamburger" onclick="toggleMenu()">
+        <span id="burger-icon">☰</span>
+      </div>
+      <nav id="topbar">
+        <a href="recipebook.html">RECIPES BOOK</a>
+        <a href="index.html">HOMEPAGE</a>
+        <a href="FromTheFridge.html">FROM THE FRIDGE</a>
+        <section id="left-side">
+          <a href="#" id="logoutBtn"
+            ><img src="images/Log_out.png" alt="Log out"
+          /></a>
+          <a href="profile.html"
+            ><img src="images/avatar.png" alt="Profile"
+          /></a>
+        </section>
+      </nav>
+    </header>
 
-  <section id="avatar">
-    <label for="fileInput" id="avatar-label">
-        <img id="profilePic" src="images/3d_avatar_10.png" alt="Avatar">
-    </label>
-    <input type="file" id="fileInput" accept="image/*" style="display: none;">
-  </section>
+    <section id="avatar">
+      <label for="fileInput" id="avatar-label">
+        <img id="profilePic" src="images/3d_avatar_10.png" alt="Avatar" />
+      </label>
+      <input
+        type="file"
+        id="fileInput"
+        accept="image/*"
+        style="display: none"
+      />
+    </section>
 
-  <section id="option-prof">
-  <a href="admin.html" class="btn-link" id="viewStatsBtn" style="display: none;">
-    <p>View Stats</p>
-  </a>
-</section>
+    <section id="option-prof">
+      <a
+        href="admin.html"
+        class="btn-link"
+        id="viewStatsBtn"
+        style="display: none"
+      >
+        <p>View Stats</p>
+      </a>
+    </section>
 
-
-
-
-  <!-- טופס עריכת פרופיל -->
-  <div id="profileOverlay" class="overlay hidden">
-    <div class="overlay-content">
-      <h2>Modify Profile</h2>
-      <form id="profileForm">
-        <label for="username">Change Username</label>
-        <input type="text" id="username" name="username" placeholder="New username" required />
-        <label for="currentPassword">Actual Password</label>
-        <input type="password" id="currentPassword" name="currentPassword" placeholder="Current password" autocomplete="current-password" required />
-        <label for="newPassword">New Password</label>
-        <input type="password" id="newPassword" name="newPassword" placeholder="New password" autocomplete="new-password" />
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="New email" autocomplete="email" required />
-        <div class="buttons">
-          <button type="submit">Save Changes</button>
-          <button type="button" id="closeProfileEdit">Cancel</button>
-        </div>
-      </form>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="save">Save</button>
+      <button class="tab-btn" data-tab="recommended">Recommended</button>
     </div>
-  </div>
 
-  <!-- טאבים -->
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="save">Save</button>
-    <button class="tab-btn" data-tab="recommended">Recommended</button>
-  </div>
+    <div id="save" class="tab-content active">
+      <div id="favoritesContainer" class="container"></div>
+    </div>
 
-  <!-- 🧡 מועדפים -->
-  <div id="save" class="tab-content active">
-    
-    <div id="favoritesContainer" class="container"></div>
-  </div>
+    <div id="recommended" class="tab-content">
+      <section id="recommendedContainer" class="container"></section>
+    </div>
 
-  <!-- 🤖 המלצות -->
-  <div id="recommended" class="tab-content">
-    <section id="recommendedContainer" class="container"></section>
-  </div>
-
-  <footer>
-    <section id="footer-sec">
-      <section id="first-foot">
-        <h1>WHO WE ARE</h1>
-        <ul>
-          <li><a href="profile.html">Your profile</a></li>
-          <li><a href="FromTheFridge.html">Recipes just for you</a></li>
-          <li><a href="recipebook.html">Recipes book</a></li>
-        </ul>
+    <footer>
+      <section id="footer-sec">
+        <section id="first-foot">
+          <h1>WHO WE ARE</h1>
+          <ul>
+            <li><a href="profile.html">Your profile</a></li>
+            <li><a href="FromTheFridge.html">Recipes just for you</a></li>
+            <li><a href="recipebook.html">Recipes book</a></li>
+          </ul>
+        </section>
+        <section id="sec-foot">
+          <h1>FOLLOW US</h1>
+          <ul>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.twitter.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+          </ul>
+        </section>
       </section>
-      <section id="sec-foot">
-        <h1>FOLLOW US</h1>
-        <ul>
-          <li><a href="https://www.facebook.com/">Facebook</a></li>
-          <li><a href="https://www.twitter.com/">Twitter</a></li>
-          <li><a href="https://www.instagram.com/">Instagram</a></li>
-        </ul>
+      <section id="icons">
+        <a href="https://www.twitter.com/"
+          ><img src="images/tw.png" alt="Twitter"
+        /></a>
+        <a href="https://www.facebook.com/"
+          ><img src="images/fb.png" alt="Facebook"
+        /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="images/ig.png" alt="Instagram"
+        /></a>
       </section>
-    </section>
-    <section id="icons">
-      <a href="https://www.twitter.com/"><img src="images/tw.png" alt="Twitter" /></a>
-      <a href="https://www.facebook.com/"><img src="images/fb.png" alt="Facebook" /></a>
-      <a href="https://www.instagram.com/"><img src="images/ig.png" alt="Instagram" /></a>
-    </section>
-    <section id="name">
-      <p>© 2025 FLOWER SHOP</p>
-    </section>
-  </footer>
+      <section id="name">
+        <p>© 2025 FLOWER SHOP</p>
+      </section>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
