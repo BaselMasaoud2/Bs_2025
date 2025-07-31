@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch(
-  `https://api.spoonacular.com/recipes/random?number=4&apiKey=7339065d49204c8eb9f7895404ec6976`
+  `https://api.spoonacular.com/recipes/random?number=4&apiKey=c71dde573eb84f41a6cd0a89bac48bd0`
 );
 
     const data = await response.json();
@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch(
-      `https://api.spoonacular.com/recipes/random?number=1&apiKey=7339065d49204c8eb9f7895404ec6976`
+      `https://api.spoonacular.com/recipes/random?number=1&apiKey=c71dde573eb84f41a6cd0a89bac48bd0`
     );
     const data = await response.json();
 
@@ -667,7 +667,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch(
-      `https://api.spoonacular.com/recipes/random?number=5&apiKey=7339065d49204c8eb9f7895404ec6976`
+      `https://api.spoonacular.com/recipes/random?number=5&apiKey=c71dde573eb84f41a6cd0a89bac48bd0`
     );
     const data = await response.json();
 
