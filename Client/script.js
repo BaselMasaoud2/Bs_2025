@@ -418,7 +418,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch(
-      `https://api.spoonacular.com/recipes/random?number=1&apiKey=c71dde573eb84f41a6cd0a89bac48bd0`
+      `https://api.spoonacular.com/recipes/random?number=10&apiKey=c71dde573eb84f41a6cd0a89bac48bd0`
     );
     const data = await response.json();
 
